@@ -10,7 +10,7 @@ def read_file(filename):
 # 轉換資料
 def convert(dlogs):
 	conversation = []
-	#name = None
+	name = None
 	for dlog in dlogs:
 		if dlog == 'Allen':
 			name = 'Allen'
@@ -18,7 +18,8 @@ def convert(dlogs):
 		elif dlog == 'Tom':
 			name = 'Tom'
 			continue
-		conversation.append(name + ': ' + dlog)
+		if name:
+			conversation.append(name + ': ' + dlog)
 	return conversation
 	
 # 寫入檔案
