@@ -12,8 +12,11 @@ def convert(dlogs):
 	conversation = []
 	#name = None
 	for dlog in dlogs:
-		if dlog == 'Allen' or 'Tom':
-			name = dlog
+		if dlog == 'Allen':
+			name = 'Allen'
+			continue
+		elif dlog == 'Tom':
+			name = 'Tom'
 			continue
 		conversation.append(name + ': ' + dlog)
 	return conversation
